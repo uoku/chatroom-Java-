@@ -6,7 +6,7 @@ This is the simple chatroom example that I try to learn computer network and Jav
 2.import into eclipse
 3.run
 4.input "client" to open client and "server" to open server
-# environment
+# Environment
 Windows 10 , jdk-11.0.2
-# problem
+# Problem
 there are still some bug.

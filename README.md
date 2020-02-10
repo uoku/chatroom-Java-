@@ -8,3 +8,5 @@ This is the simple chatroom example that I try to learn computer network and Jav
 4.input "client" to open client and "server" to open server
 # environment
 Windows 10 , jdk-11.0.2
+# problem
+there are still some bug.

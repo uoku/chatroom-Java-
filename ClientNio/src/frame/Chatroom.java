@@ -98,7 +98,7 @@ public class Chatroom  extends JFrame{
 						socketChannel.setOption(StandardSocketOptions.SO_SNDBUF, 128 * 1024);
 						socketChannel.setOption(StandardSocketOptions.SO_KEEPALIVE, true);
 						socketChannel.setOption(StandardSocketOptions.SO_LINGER, 5);
-						socketChannel.connect(new InetSocketAddress("***********", port_ff)); // change to your ip
+						socketChannel.connect(new InetSocketAddress("127.0.0.1", port_ff));
 						if (socketChannel.isConnected()) {
 							InetAddress ip = InetAddress.getLocalHost();
 							ByteBuffer sendBuffer = ByteBuffer.wrap(String.valueOf(text).getBytes());

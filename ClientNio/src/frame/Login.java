@@ -76,7 +76,7 @@ public class Login extends JFrame{
 						socketChannel.setOption(StandardSocketOptions.SO_SNDBUF, 128 * 1024);
 						socketChannel.setOption(StandardSocketOptions.SO_KEEPALIVE, true);
 						socketChannel.setOption(StandardSocketOptions.SO_LINGER, 5);
-						socketChannel.connect(new InetSocketAddress("*******", port));//******* = your server ip 
+						socketChannel.connect(new InetSocketAddress("127.0.0.1", port));
 						if (socketChannel.isConnected()) {
 							InetAddress ip = InetAddress.getLocalHost();
 							ByteBuffer sendBuffer = ByteBuffer.wrap(String.valueOf("0"+text1.getText()+"*"+text2.getText()+"*"+ip+"*").getBytes());
@@ -114,7 +114,7 @@ public class Login extends JFrame{
 				/*
 				try {
 					Socket client = new Socket();
-					InetSocketAddress ad = new InetSocketAddress("********",port); your server ip
+					InetSocketAddress ad = new InetSocketAddress("127.0.0.1",port);
 					client.connect(ad); 	
 					BufferedWriter out = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
 					InetAddress ip = InetAddress.getLocalHost();
@@ -165,7 +165,7 @@ public class Login extends JFrame{
 							socketChannel.setOption(StandardSocketOptions.SO_SNDBUF, 128 * 1024);
 							socketChannel.setOption(StandardSocketOptions.SO_KEEPALIVE, true);
 							socketChannel.setOption(StandardSocketOptions.SO_LINGER, 5);
-							socketChannel.connect(new InetSocketAddress("********", port)); // your server ip;
+							socketChannel.connect(new InetSocketAddress("127.0.0.1", port));
 							if (socketChannel.isConnected()) {
 								ByteBuffer sendBuffer = ByteBuffer.wrap(("2"+text1.getText()+"*"+text2.getText()+"*"+name+"*").getBytes());
 								socketChannel.write(sendBuffer);
@@ -198,7 +198,7 @@ public class Login extends JFrame{
 					String name = JOptionPane.showInputDialog("請輸入使用者名稱:");
 					if(name!=null) {
 						Socket client = new Socket();
-						InetSocketAddress ad = new InetSocketAddress("********",port); // your server ip
+						InetSocketAddress ad = new InetSocketAddress("127.0.0.1",port);
 						client.connect(ad); 	 
 						BufferedWriter out = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
 						out.write(("2"+text1.getText()+"*"+text2.getText()+"*"+name+"\r\n\r\n")); //sent account

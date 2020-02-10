@@ -83,7 +83,7 @@ public class Main {
 							socketChannel.setOption(StandardSocketOptions.SO_SNDBUF, 128 * 1024);
 							socketChannel.setOption(StandardSocketOptions.SO_KEEPALIVE, true);
 							socketChannel.setOption(StandardSocketOptions.SO_LINGER, 5);
-							socketChannel.connect(new InetSocketAddress("****************", port)); // here change ***** to your server ip
+							socketChannel.connect(new InetSocketAddress("127.0.0.1", port));
 							if (socketChannel.isConnected()) {
 								ByteBuffer sendBuffer = ByteBuffer.wrap(String.valueOf("6" + leave + "*").getBytes());
 								socketChannel.write(sendBuffer);
@@ -99,7 +99,7 @@ public class Main {
 					}
 					/*
 					 * try { Socket client = new Socket(); InetSocketAddress ad = new
-					 * InetSocketAddress("******",5500); client.connect(ad); BufferedWriter
+					 * InetSocketAddress("127.0.0.1",5500); client.connect(ad); BufferedWriter
 					 * out = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
 					 * out.write("6"+leave+"\r\n\r\n"); //sent account out.flush(); client.close();
 					 * } catch (IOException e1) { e1.printStackTrace(); }

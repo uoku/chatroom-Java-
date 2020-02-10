@@ -250,7 +250,7 @@ public class Friendlist extends JFrame {
 						socketChannel.setOption(StandardSocketOptions.SO_SNDBUF, 128 * 1024);
 						socketChannel.setOption(StandardSocketOptions.SO_KEEPALIVE, true);
 						socketChannel.setOption(StandardSocketOptions.SO_LINGER, 5);
-						socketChannel.connect(new InetSocketAddress("********", port)); // change to your ip
+						socketChannel.connect(new InetSocketAddress("127.0.0.1", port));
 						if (socketChannel.isConnected()) {
 							ByteBuffer sendBuffer = ByteBuffer
 									.wrap(String.valueOf("3" + info + "*" + searchbox.getText() + "*").getBytes());
@@ -367,7 +367,7 @@ public class Friendlist extends JFrame {
 						socketChannel.setOption(StandardSocketOptions.SO_SNDBUF, 128 * 1024);
 						socketChannel.setOption(StandardSocketOptions.SO_KEEPALIVE, true);
 						socketChannel.setOption(StandardSocketOptions.SO_LINGER, 5);
-						socketChannel.connect(new InetSocketAddress("*********", port));// change to tour ip
+						socketChannel.connect(new InetSocketAddress("127.0.0.1", port));
 						if (socketChannel.isConnected()) {
 							ByteBuffer sendBuffer = ByteBuffer.wrap(String.valueOf("4" + info + "*").getBytes());
 							socketChannel.write(sendBuffer);
@@ -480,7 +480,7 @@ public class Friendlist extends JFrame {
 						socketChannel.setOption(StandardSocketOptions.SO_SNDBUF, 128 * 1024);
 						socketChannel.setOption(StandardSocketOptions.SO_KEEPALIVE, true);
 						socketChannel.setOption(StandardSocketOptions.SO_LINGER, 5);
-						socketChannel.connect(new InetSocketAddress("*********", port));// change to your ip
+						socketChannel.connect(new InetSocketAddress("127.0.0.1", port));
 						if (socketChannel.isConnected()) {
 							String friend_ac = JOptionPane.showInputDialog("請輸入好友帳號:");
 							ByteBuffer sendBuffer = ByteBuffer
